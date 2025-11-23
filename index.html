@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA GO | Liberdade Digital</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aura: { 900: '#0B0516', 800: '#150A2A' },
+                        gold: { DEFAULT: '#D4AF37', light: '#F3E5AB' },
+                        lilac: { DEFAULT: '#A78BFA' },
+                        slate: '#94A3B8',
+                        success: '#10B981',
+                        danger: '#EF4444',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { background-color: #0B0516; color: #F0F0F5; overflow-x: hidden; }
+        
+        /* Background Noise */
+        .bg-noise {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            opacity: 0.04; pointer-events: none; z-index: -10;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Glassmorphism */
+        .glass-card {
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(36, 18, 66, 0.4) 0%, rgba(11, 5, 22, 0.6) 100%);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(167, 139, 250, 0.3); transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* FAQ Styling */
+        details > summary { list-style: none; cursor: pointer; outline: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); transition: all 0.3s ease;
+            background: #25D366;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body class="antialiased selection:bg-lilac selection:text-aura-900">
+
+    <div class="bg-noise"></div>
+
+    <nav class="fixed w-full z-50 top-0 py-4 px-6 md:px-16 flex justify-between items-center backdrop-blur-xl bg-aura-900/80 border-b border-white/5">
+        <div class="w-auto relative flex items-center justify-start">
+             <span class="font-serif text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lilac via-gold to-lilac tracking-[0.2em] hover:opacity-80 transition-opacity cursor-default">
+                AURA GO
+            </span>
+        </div>
+        <div class="hidden md:flex gap-8 text-[11px] font-sans tracking-[0.2em] text-slate font-medium uppercase">
+            <a href="#economia" class="hover:text-gold transition-colors">Economia</a>
+            <a href="#portfolio" class="hover:text-lilac transition-colors">Portfólio</a>
+            <a href="#planos" class="hover:text-lilac transition-colors">Planos</a>
+            <a href="#faq" class="hover:text-lilac transition-colors">FAQ</a>
+        </div>
+        <a href="https://wa.me/5532999116300" target="_blank" class="hidden md:block text-gold border border-gold/30 px-6 py-2 text-xs font-sans tracking-wider rounded-sm hover:bg-gold hover:text-aura-900 transition-all duration-500 font-bold uppercase">
+            Iniciar
+        </a>
+    </nav>
+
+    <header class="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 pt-20 z-10">
+        <div class="mb-8 relative z-20">
+            <span class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-gold/40 bg-aura-900/80 backdrop-blur-md text-gold text-xs font-bold tracking-widest uppercase">
+                Sem Mensalidades &bull; 100% Seu
+            </span>
+        </div>
+
+        <div class="flex flex-col w-full max-w-7xl mx-auto relative z-20">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif italic text-lilac leading-tight">
+                Sua marca on-line,
+            </h1>
+            <h1 class="text-4xl md:text-6xl lg:text-8xl font-sans font-bold text-white tracking-tight uppercase leading-none mt-2">
+                Sem Aluguel.
+            </h1>
+        </div>
+
+        <div class="mt-12 max-w-xl relative z-20">
+            <div class="absolute left-0 top-0 h-full w-[2px] bg-gradient-to-b from-gold to-transparent"></div>
+            <div class="pl-8">
+                <p class="text-slate font-sans font-light text-lg leading-relaxed mb-8">
+                    Desenvolvemos sites de alta performance com pagamento único. 
+                    <span class="text-white font-medium">Nós entregamos o código.</span> Você tem a liberdade total.
+                </p>
+                <a href="#economia" class="inline-flex items-center justify-center px-8 py-4 bg-gold text-aura-900 font-bold font-sans tracking-widest text-sm uppercase hover:bg-white hover:scale-105 transition-all shadow-lg shadow-gold/20">
+                    Ver a Matemática
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="economia" class="py-24 px-6 relative z-20 bg-aura-900/50 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold text-xs tracking-[0.3em] uppercase mb-4 block">Choque de Realidade</span>
+                <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">Quanto você gasta em 3 anos?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="glass-card p-8 md:p-12 rounded-sm border-danger/30 hover:border-danger/60 transition-colors">
+                    <h3 class="text-xl font-serif text-danger mb-6 flex items-center gap-2">
+                        Agências Tradicionais
+                    </h3>
+                    <ul class="space-y-4 text-sm font-sans text-slate-400 mb-8">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Criação</span> <span>R$ 2.000,00</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Hospedagem</span> <span class="text-danger">R$ 150/mês</span></li>
+                        <li class="flex justify-between font-bold text-white pt-4 border-t border-white/10"><span>Total 3 anos:</span> <span class="text-danger text-2xl">R$ 7.400,00</span></li>
+                    </ul>
+                    <div class="text-xs text-center text-slate-500 bg-black/20 py-2 rounded">❌ Site alugado. Parou de pagar, sai do ar.</div>
+                </div>
+
+                <div class="glass-card p-8 md:p-12 rounded-sm border-gold transform md:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.1)] relative">
+                    <div class="absolute top-0 right-0 bg-gold text-aura-900 text-[10px] font-bold px-3 py-1 uppercase">Melhor Opção</div>
+                    <h3 class="text-2xl font-serif text-gold mb-6 flex items-center gap-2">AURA GO</h3>
+                    <ul class="space-y-4 text-sm font-sans text-white mb-8">
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Criação Premium</span> <span>R$ 1.497,00</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Hospedagem Global</span> <span class="text-success font-bold">R$ 0,00</span></li>
+                        <li class="flex justify-between font-bold pt-4 border-t border-white/10"><span>Total 3 anos:</span> <span class="text-gold text-3xl">R$ 1.497,00</span></li>
+                    </ul>
+                    <div class="bg-gold/10 border border-gold/30 p-4 rounded text-center">
+                        <p class="text-gold text-sm font-bold">✅ ECONOMIA DE R$ 5.900,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="relative py-24 px-6 md:px-16 z-20">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-serif text-white mb-4">Resultados Reais</h2>
+            </div>
+
+            <div class="glass-card p-10 rounded-sm border border-gold/30 text-center relative overflow-hidden hover:border-gold/60 transition-colors">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-lilac via-gold to-lilac"></div>
+                <span class="text-lilac text-xs tracking-[0.3em] uppercase mb-4 block">Case Study</span>
+                <h3 class="text-4xl md:text-6xl font-serif text-white mb-6">Bloom Hair</h3>
+                <p class="text-slate font-sans font-light text-lg mb-8 max-w-2xl mx-auto">
+                    Transformamos um site WordPress lento em uma experiência de luxo com código puro.
+                    <br><span class="text-gold font-medium">Resultado:</span> Nota 100 no Google PageSpeed.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                    <span class="px-4 py-1 border border-white/10 rounded-full text-xs text-slate">HTML5 Puro</span>
+                    <span class="px-4 py-1 border border-white/10 rounded-full text-xs text-slate">Sem Banco de Dados</span>
+                </div>
+                <a href="https://bloomts.com.br" target="_blank" class="inline-flex items-center gap-2 text-gold border-b border-gold pb-1 hover:text-white hover:border-white transition-colors font-sans text-sm tracking-widest uppercase">
+                    Ver Site Ao Vivo <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="processo" class="py-24 px-6 relative z-20 bg-aura-900/50 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif text-white">Transparência Total</h2>
+            </div>
+            <div class="relative border-l-2 border-gold/20 ml-4 md:ml-8 space-y-12">
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-aura-900 border-2 border-lilac"></div>
+                    <h3 class="text-xl font-serif text-lilac mb-2">1. Estratégia</h3>
+                    <p class="text-slate text-sm">Briefing rápido para entender a essência da sua marca.</p>
+                </div>
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-aura-900 border-2 border-lilac"></div>
+                    <h3 class="text-xl font-serif text-lilac mb-2">2. Desenvolvimento</h3>
+                    <p class="text-slate text-sm">Criamos o design e o código do zero. Nada de templates prontos.</p>
+                </div>
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-gold shadow-[0_0_20px_#D4AF37]"></div>
+                    <h3 class="text-2xl font-serif text-gold mb-2">3. Entrega das Chaves</h3>
+                    <p class="text-white font-medium text-sm">Seu site no ar. Entregamos o arquivo ZIP com todo o código.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="relative py-24 px-6 md:px-16 lg:px-32 z-20">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">Escolha sua Aura</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
+            <div class="glass-card p-8 rounded-sm border-t-4 border-t-lilac/50">
+                <h3 class="text-2xl font-serif text-lilac mb-2">Start</h3>
+                <p class="text-slate text-xs mb-6">Profissionais liberais.</p>
+                <div class="mb-8"><div class="text-3xl font-bold text-white font-sans">R$ 997</div></div>
+                <ul class="space-y-4 mb-8 text-sm font-sans text-slate-300">
+                    <li class="flex gap-3"><span class="text-success">✓</span> Site One-Page</li>
+                    <li class="flex gap-3"><span class="text-success">✓</span> Entrega do Código</li>
+                </ul>
+                <a href="https://wa.me/5532999116300" target="_blank" class="block w-full py-3 text-center border border-lilac/30 text-lilac hover:bg-lilac/10 text-xs tracking-widest uppercase rounded-sm transition-colors">Selecionar</a>
+            </div>
+            <div class="glass-card p-10 rounded-sm relative transform lg:-translate-y-6 z-20 bg-gradient-to-b from-aura-800 via-aura-900 to-aura-900 border border-gold/50">
+                <div class="absolute top-0 right-0 bg-gold text-aura-900 text-[10px] font-bold px-4 py-1 uppercase">Recomendado</div>
+                <h3 class="text-3xl font-serif text-gold mb-2">Aura Pro</h3>
+                <p class="text-slate text-sm mb-6">Landing Page completa.</p>
+                <div class="mb-8"><div class="text-4xl font-bold text-white font-sans">R$ 1.497</div></div>
+                <ul class="space-y-4 mb-8 text-sm font-sans text-white">
+                    <li class="flex gap-3"><span class="text-gold">✓</span> Design Premium</li>
+                    <li class="flex gap-3"><span class="text-gold">✓</span> Copywriting Incluso</li>
+                    <li class="flex gap-3"><span class="text-gold">✓</span> Código Fonte Completo</li>
+                </ul>
+                <a href="https://wa.me/5532999116300" target="_blank" class="block w-full py-4 text-center bg-gold text-aura-900 font-bold hover:bg-white transition text-xs tracking-widest uppercase rounded-sm">Garantir Vaga</a>
+            </div>
+            <div class="glass-card p-8 rounded-sm border-t-4 border-t-lilac/50">
+                <h3 class="text-2xl font-serif text-lilac mb-2">Expert</h3>
+                <p class="text-slate text-xs mb-6">Lojas e Lançamentos.</p>
+                <div class="mb-8"><div class="text-3xl font-bold text-white font-sans">R$ 2.500+</div></div>
+                <a href="https://wa.me/32999116300" target="_blank" class="block w-full py-3 text-center border border-white/10 text-white hover:bg-white/5 text-xs tracking-widest uppercase rounded-sm transition-colors">Consultar</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 px-6 md:px-16 relative z-30 bg-aura-900 border-t border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-serif text-white text-center mb-12">Perguntas Frequentes</h2>
+            
+            <div class="glass-card p-2 rounded-lg">
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Eu preciso pagar hospedagem mensal?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Não para nós. Utilizamos tecnologias modernas (Vercel/GitHub Pages) que possuem planos gratuitos vitalícios para sites estáticos.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        O que acontece se eu quiser mudar algo?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Como você tem o código, tem liberdade total. Para alterações simples, oferecemos pacotes de atualização avulsos. Sem mensalidades obrigatórias.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Isso é WordPress ou Wix?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Não. Sites Wix/WP tendem a ficar lentos e exigem manutenção. Nós escrevemos código puro (HTML/CSS), garantindo velocidade máxima e segurança.
+                    </p>
+                </details>
+
+                <details class="p-4 border-none group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Vocês escrevem os textos?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Sim. No plano "Aura Pro", incluímos o serviço de Copywriting (escrita persuasiva para vendas).
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+       <footer class="bg-aura-900 border-t border-white/10 pt-16 pb-8 px-6 md:px-16 relative z-50">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 text-left">
+            
+            <div class="md:col-span-1">
+                <span class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lilac via-gold to-lilac tracking-widest">
+                    AURA GO
+                </span>
+                <p class="text-slate text-xs mt-4 font-sans font-light leading-relaxed">
+                    Elevando padrões digitais através de código puro e design estratégico.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-serif text-lg mb-4">Menu</h4>
+                <ul class="space-y-2 text-xs font-sans text-slate">
+                    <li><a href="#economia" class="hover:text-gold transition-colors">Economia</a></li>
+                    <li><a href="#portfolio" class="hover:text-gold transition-colors">Portfólio</a></li>
+                    <li><a href="#planos" class="hover:text-gold transition-colors">Planos</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-serif text-lg mb-4">Contato</h4>
+                <ul class="space-y-2 text-xs font-sans text-slate">
+                    <li class="flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-success"></i> 
+                        <a href="https://wa.me/5532999116300" target="_blank" class="hover:text-white transition-colors">
+                            (32) 99911-6300
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-envelope text-lilac"></i> 
+                        <a href="mailto:fale.aura@aurago.site" class="hover:text-white transition-colors">
+                            fale.aura@aurago.site
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-serif text-lg mb-4">Rede Social</h4>
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/aurago.site" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-lilac hover:text-aura-900 transition-all">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-white/5 pt-8 text-center">
+            <p class="text-slate/30 text-[10px] font-sans uppercase tracking-widest">
+                &copy; 2025 Aura Go. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+         
+  
