@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AURA GO | Liberdade Digital</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -30,56 +31,123 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        body { background-color: #0B0516; color: #F0F0F5; overflow-x: hidden; }
-        
+        body {
+            background-color: #0B0516;
+            color: #F0F0F5;
+            overflow-x: hidden;
+        }
+
         /* Background Noise */
         .bg-noise {
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            opacity: 0.04; pointer-events: none; z-index: -10;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: -10;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
         /* Glassmorphism */
         .glass-card {
-            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             background: linear-gradient(135deg, rgba(36, 18, 66, 0.4) 0%, rgba(11, 5, 22, 0.6) 100%);
             transition: all 0.3s ease;
         }
+
         .glass-card:hover {
-            border-color: rgba(167, 139, 250, 0.3); transform: translateY(-5px);
+            border-color: rgba(167, 139, 250, 0.3);
+            transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         /* FAQ Styling */
-        details > summary { list-style: none; cursor: pointer; outline: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
-        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
+        details>summary {
+            list-style: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary~* {
+            animation: sweep .3s ease-in-out;
+        }
+
+        @keyframes sweep {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
 
         /* WhatsApp Float */
         .whatsapp-float {
-            position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
-            width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); transition: all 0.3s ease;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
             background: #25D366;
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
+
 <body class="antialiased selection:bg-lilac selection:text-aura-900">
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5532999116300" target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+    </a>
 
     <div class="bg-noise"></div>
 
-    <nav class="fixed w-full z-50 top-0 py-4 px-6 md:px-16 flex justify-between items-center backdrop-blur-xl bg-aura-900/80 border-b border-white/5">
+    <nav
+        class="fixed w-full z-50 top-0 py-4 px-6 md:px-16 flex justify-between items-center backdrop-blur-xl bg-aura-900/80 border-b border-white/5">
         <div class="w-auto relative flex items-center justify-start">
-             <span class="font-serif text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lilac via-gold to-lilac tracking-[0.2em] hover:opacity-80 transition-opacity cursor-default">
+            <span
+                class="font-serif text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lilac via-gold to-lilac tracking-[0.2em] hover:opacity-80 transition-opacity cursor-default">
                 AURA GO
             </span>
         </div>
@@ -89,69 +157,115 @@
             <a href="#planos" class="hover:text-lilac transition-colors">Planos</a>
             <a href="#faq" class="hover:text-lilac transition-colors">FAQ</a>
         </div>
-        <a href="https://wa.me/5532999116300" target="_blank" class="hidden md:block text-gold border border-gold/30 px-6 py-2 text-xs font-sans tracking-wider rounded-sm hover:bg-gold hover:text-aura-900 transition-all duration-500 font-bold uppercase">
+        <a href="https://wa.me/5532999116300" target="_blank"
+            class="hidden md:block text-gold border border-gold/30 px-6 py-2 text-xs font-sans tracking-wider rounded-sm hover:bg-gold hover:text-aura-900 transition-all duration-500 font-bold uppercase">
             Iniciar
         </a>
     </nav>
 
-    <header class="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 pt-20 z-10">
-        <div class="mb-8 relative z-20">
-            <span class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-gold/40 bg-aura-900/80 backdrop-blur-md text-gold text-xs font-bold tracking-widest uppercase">
-                Sem Mensalidades &bull; 100% Seu
+    <header
+        class="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 pt-20 z-10 overflow-hidden">
+        <!-- Abstract Glow Background -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-lilac/20 rounded-full blur-[120px] -z-10 animate-pulse">
+        </div>
+
+        <div class="mb-8 relative z-20 reveal">
+            <span
+                class="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-gold/40 bg-aura-900/80 backdrop-blur-md text-gold text-xs font-bold tracking-widest uppercase shadow-[0_0_15px_rgba(212,175,55,0.1)]">
+                <i class="fas fa-star text-[10px]"></i> Sem Mensalidades &bull; 100% Seu
             </span>
         </div>
 
-        <div class="flex flex-col w-full max-w-7xl mx-auto relative z-20">
+        <div class="flex flex-col w-full max-w-7xl mx-auto relative z-20 reveal">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif italic text-lilac leading-tight">
                 Sua marca on-line,
             </h1>
-            <h1 class="text-4xl md:text-6xl lg:text-8xl font-sans font-bold text-white tracking-tight uppercase leading-none mt-2">
+            <h1
+                class="text-4xl md:text-6xl lg:text-8xl font-sans font-bold text-white tracking-tight uppercase leading-none mt-2 drop-shadow-2xl">
                 Sem Aluguel.
             </h1>
         </div>
 
-        <div class="mt-12 max-w-xl relative z-20">
+        <div class="mt-12 max-w-xl relative z-20 reveal">
             <div class="absolute left-0 top-0 h-full w-[2px] bg-gradient-to-b from-gold to-transparent"></div>
             <div class="pl-8">
                 <p class="text-slate font-sans font-light text-lg leading-relaxed mb-8">
-                    Desenvolvemos sites de alta performance com pagamento único. 
+                    Desenvolvemos sites de alta performance com pagamento único.
                     <span class="text-white font-medium">Nós entregamos o código.</span> Você tem a liberdade total.
                 </p>
-                <a href="#economia" class="inline-flex items-center justify-center px-8 py-4 bg-gold text-aura-900 font-bold font-sans tracking-widest text-sm uppercase hover:bg-white hover:scale-105 transition-all shadow-lg shadow-gold/20">
-                    Ver a Matemática
-                </a>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#economia"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-gold text-aura-900 font-bold font-sans tracking-widest text-sm uppercase hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                        Ver a Matemática
+                    </a>
+                    <a href="#portfolio"
+                        class="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-bold font-sans tracking-widest text-sm uppercase hover:bg-white/10 hover:border-white transition-all">
+                        Ver Projetos
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
     <section id="economia" class="py-24 px-6 relative z-20 bg-aura-900/50 border-t border-white/5">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <span class="text-gold text-xs tracking-[0.3em] uppercase mb-4 block">Choque de Realidade</span>
                 <h2 class="text-3xl md:text-5xl font-serif text-white mb-6">Quanto você gasta em 3 anos?</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <div class="glass-card p-8 md:p-12 rounded-sm border-danger/30 hover:border-danger/60 transition-colors">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-end">
+                <!-- Traditional Agency -->
+                <div
+                    class="glass-card p-8 md:p-12 rounded-sm border-danger/30 hover:border-danger/60 transition-colors reveal">
                     <h3 class="text-xl font-serif text-danger mb-6 flex items-center gap-2">
-                        Agências Tradicionais
+                        <i class="fas fa-building"></i> Agências Tradicionais
                     </h3>
                     <ul class="space-y-4 text-sm font-sans text-slate-400 mb-8">
-                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Criação</span> <span>R$ 2.000,00</span></li>
-                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Hospedagem</span> <span class="text-danger">R$ 150/mês</span></li>
-                        <li class="flex justify-between font-bold text-white pt-4 border-t border-white/10"><span>Total 3 anos:</span> <span class="text-danger text-2xl">R$ 7.400,00</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Criação</span> <span>R$
+                                2.000,00</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Hospedagem</span> <span
+                                class="text-danger">R$ 150/mês</span></li>
+                        <li class="flex justify-between font-bold text-white pt-4 border-t border-white/10"><span>Total
+                                3 anos:</span> <span class="text-danger text-2xl">R$ 7.400,00</span></li>
                     </ul>
-                    <div class="text-xs text-center text-slate-500 bg-black/20 py-2 rounded">❌ Site alugado. Parou de pagar, sai do ar.</div>
+
+                    <!-- Visual Bar -->
+                    <div class="w-full bg-white/5 h-4 rounded-full overflow-hidden mb-4">
+                        <div class="h-full bg-danger w-full"></div>
+                    </div>
+
+                    <div class="text-xs text-center text-slate-500 bg-black/20 py-2 rounded">❌ Site alugado. Parou de
+                        pagar, sai do ar.</div>
                 </div>
 
-                <div class="glass-card p-8 md:p-12 rounded-sm border-gold transform md:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.1)] relative">
-                    <div class="absolute top-0 right-0 bg-gold text-aura-900 text-[10px] font-bold px-3 py-1 uppercase">Melhor Opção</div>
-                    <h3 class="text-2xl font-serif text-gold mb-6 flex items-center gap-2">AURA GO</h3>
+                <!-- Aura Go -->
+                <div
+                    class="glass-card p-8 md:p-12 rounded-sm border-gold transform md:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.1)] relative reveal">
+                    <div class="absolute top-0 right-0 bg-gold text-aura-900 text-[10px] font-bold px-3 py-1 uppercase">
+                        Melhor Opção</div>
+                    <h3 class="text-2xl font-serif text-gold mb-6 flex items-center gap-2">
+                        <i class="fas fa-bolt"></i> AURA GO
+                    </h3>
                     <ul class="space-y-4 text-sm font-sans text-white mb-8">
-                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Criação Premium</span> <span>R$ 1.497,00</span></li>
-                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Hospedagem Global</span> <span class="text-success font-bold">R$ 0,00</span></li>
-                        <li class="flex justify-between font-bold pt-4 border-t border-white/10"><span>Total 3 anos:</span> <span class="text-gold text-3xl">R$ 1.497,00</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Criação Premium</span>
+                            <span>R$ 1.497,00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>Hospedagem Global</span>
+                            <span class="text-success font-bold">R$ 0,00</span>
+                        </li>
+                        <li class="flex justify-between font-bold pt-4 border-t border-white/10"><span>Total 3
+                                anos:</span> <span class="text-gold text-3xl">R$ 1.497,00</span></li>
                     </ul>
+
+                    <!-- Visual Bar -->
+                    <div class="w-full bg-white/5 h-4 rounded-full overflow-hidden mb-4 relative">
+                        <div class="h-full bg-gold w-[20%] relative">
+                            <span class="absolute -right-2 -top-6 text-gold text-xs font-bold">20% do custo</span>
+                        </div>
+                    </div>
+
                     <div class="bg-gold/10 border border-gold/30 p-4 rounded text-center">
                         <p class="text-gold text-sm font-bold">✅ ECONOMIA DE R$ 5.900,00</p>
                     </div>
@@ -166,7 +280,8 @@
                 <h2 class="text-3xl md:text-5xl font-serif text-white mb-4">Resultados Reais</h2>
             </div>
 
-            <div class="glass-card p-10 rounded-sm border border-gold/30 text-center relative overflow-hidden hover:border-gold/60 transition-colors">
+            <div
+                class="glass-card p-10 rounded-sm border border-gold/30 text-center relative overflow-hidden hover:border-gold/60 transition-colors">
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-lilac via-gold to-lilac"></div>
                 <span class="text-lilac text-xs tracking-[0.3em] uppercase mb-4 block">Case Study</span>
                 <h3 class="text-4xl md:text-6xl font-serif text-white mb-6">Bloom por Tamires Sousa</h3>
@@ -176,9 +291,11 @@
                 </p>
                 <div class="flex flex-wrap justify-center gap-3 mb-10">
                     <span class="px-4 py-1 border border-white/10 rounded-full text-xs text-slate">HTML5 Puro</span>
-                    <span class="px-4 py-1 border border-white/10 rounded-full text-xs text-slate">Sem Banco de Dados</span>
+                    <span class="px-4 py-1 border border-white/10 rounded-full text-xs text-slate">Sem Banco de
+                        Dados</span>
                 </div>
-                <a href="https://bloomts.com.br" target="_blank" class="inline-flex items-center gap-2 text-gold border-b border-gold pb-1 hover:text-white hover:border-white transition-colors font-sans text-sm tracking-widest uppercase">
+                <a href="https://bloomts.com.br" target="_blank"
+                    class="inline-flex items-center gap-2 text-gold border-b border-gold pb-1 hover:text-white hover:border-white transition-colors font-sans text-sm tracking-widest uppercase">
                     Ver Site Ao Vivo <i class="fas fa-external-link-alt ml-1"></i>
                 </a>
             </div>
@@ -192,306 +309,390 @@
             </div>
             <div class="relative border-l-2 border-gold/20 ml-4 md:ml-8 space-y-12">
                 <div class="relative pl-8 md:pl-12">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-aura-900 border-2 border-lilac"></div>
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-aura-900 border-2 border-lilac">
+                    </div>
                     <h3 class="text-xl font-serif text-lilac mb-2">1. Estratégia</h3>
                     <p class="text-slate text-sm">Briefing rápido para entender a essência da sua marca.</p>
                 </div>
                 <div class="relative pl-8 md:pl-12">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-aura-900 border-2 border-lilac"></div>
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-aura-900 border-2 border-lilac">
+                    </div>
                     <h3 class="text-xl font-serif text-lilac mb-2">2. Desenvolvimento</h3>
                     <p class="text-slate text-sm">Criamos o design e o código do zero. Nada de templates prontos.</p>
                 </div>
                 <div class="relative pl-8 md:pl-12">
-                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-gold shadow-[0_0_20px_#D4AF37]"></div>
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-gold shadow-[0_0_20px_#D4AF37]">
+                    </div>
                     <h3 class="text-2xl font-serif text-gold mb-2">3. Entrega das Chaves</h3>
-                    <p class="text-white font-medium text-sm">Seu site no ar. Entregamos o arquivo ZIP com todo o código.</p>
+                    <p class="text-white font-medium text-sm">Seu site no ar. Entregamos o arquivo ZIP com todo o
+                        código.</p>
                 </div>
             </div>
         </div>
     </section>
 
-   <section id="planos" class="relative py-24 px-6 md:px-16 lg:px-32 z-20">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">Escolha sua Aura</h2>
-        <p class="text-slate-400 text-lg">Pague uma vez. Seu para sempre. Sem mensalidades.</p>
-    </div>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
-        
-        <!-- Plano Start -->
-        <div class="glass-card p-8 rounded-lg border border-purple-500/20">
-            <div class="mb-6">
-                <h3 class="text-2xl font-serif text-lilac mb-2">Start</h3>
-                <p class="text-slate text-sm">Ideal para profissionais autônomos</p>
-            </div>
-            
-            <div class="mb-8">
-                <div class="text-4xl font-bold text-white font-sans mb-2">R$ 997</div>
-                <p class="text-xs text-slate-500">Pagamento único</p>
-            </div>
-            
-            <ul class="space-y-3 mb-8 text-sm text-slate-300">
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Site One-Page responsivo</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Design profissional personalizado</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Até 5 seções de conteúdo</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Formulário de contato</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>SEO básico otimizado</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span><strong>Código-fonte completo</strong></span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span><strong>Zero custos mensais</strong></span>
-                </li>
-            </ul>
-            
-            <a href="https://wa.me/5532999116300" target="_blank" 
-               class="block w-full py-3 text-center border border-lilac/30 text-lilac hover:bg-lilac/10 text-sm font-medium tracking-wide uppercase rounded-lg transition-all">
-                Selecionar
-            </a>
-        </div>
-        
-        <!-- Plano Aura Pro -->
-        <div class="glass-card p-10 rounded-lg relative transform lg:-translate-y-6 z-20 bg-gradient-to-b from-aura-800 via-aura-900 to-aura-900 border border-gold/50">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-aura-900 text-xs font-bold px-6 py-1.5 uppercase rounded-full">
-                Recomendado
-            </div>
-            
-            <div class="mb-6">
-                <h3 class="text-3xl font-serif text-gold mb-2">Aura Pro</h3>
-                <p class="text-slate-300 text-sm">Para quem busca alta conversão</p>
-            </div>
-            
-            <div class="mb-8">
-                <div class="text-5xl font-bold text-white font-sans mb-2">R$ 1.497</div>
-                <p class="text-xs text-gold-light">Pagamento único</p>
-            </div>
-            
-            <ul class="space-y-3 mb-8 text-sm text-white">
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span><strong>Tudo do plano Start +</strong></span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span>Landing Page de alta conversão</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span><strong>Copywriting profissional incluso</strong></span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span>Design premium com animações</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span>Até 8 seções personalizadas</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span>Integração com Google Analytics</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span>2 rodadas de revisão</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span><strong>Código + documentação técnica</strong></span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-gold text-lg">✓</span>
-                    <span><strong>Propriedade total e vitalícia</strong></span>
-                </li>
-            </ul>
-            
-            <a href="https://wa.me/5532999116300" target="_blank" 
-               class="block w-full py-4 text-center bg-gold text-aura-900 font-bold hover:bg-white transition text-sm tracking-wide uppercase rounded-lg shadow-lg">
-                Garantir Vaga
-            </a>
-        </div>
-        
-        <!-- Plano Expert -->
-        <div class="glass-card p-8 rounded-lg border border-purple-500/20">
-            <div class="mb-6">
-                <h3 class="text-2xl font-serif text-lilac mb-2">Expert</h3>
-                <p class="text-slate text-sm">Projetos complexos e lançamentos</p>
-            </div>
-            
-            <div class="mb-8">
-                <div class="text-4xl font-bold text-white font-sans mb-2">R$ 2.500+</div>
-                <p class="text-xs text-slate-500">Sob consulta</p>
-            </div>
-            
-            <ul class="space-y-3 mb-8 text-sm text-slate-300">
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span><strong>Tudo do Aura Pro +</strong></span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Site multi-página ou e-commerce</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Estratégia de conversão personalizada</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Design exclusivo e interativo</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Copywriting estratégico completo</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Integrações avançadas (CRM, automações)</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Consultoria de lançamento</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span>Revisões ilimitadas</span>
-                </li>
-                <li class="flex gap-3 items-start">
-                    <span class="text-lilac text-lg">✓</span>
-                    <span><strong>Investimento único, retorno infinito</strong></span>
-                </li>
-            </ul>
-            
-            <a href="https://wa.me/5532999116300" target="_blank" 
-               class="block w-full py-3 text-center border border-lilac/30 text-lilac hover:bg-lilac/10 text-sm font-medium tracking-wide uppercase rounded-lg transition-all">
-                Consultar
-            </a>
-        </div>
-        
-    </div>
-</section>
-
- <section id="faq" class="py-24 px-6 md:px-16 relative z-30 bg-aura-900 border-t border-white/5">
-    <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-serif text-white text-center mb-12">Perguntas Frequentes</h2>
-        
-        <div class="glass-card p-2 rounded-lg">
-            <details class="p-4 border-b border-white/10 group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    Quanto tempo demora para ficar pronto?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    O prazo médio é de 7 a 14 dias úteis, dependendo do plano escolhido e da complexidade. No plano Start, geralmente entregamos em 7 dias. No Aura Pro, entre 10-14 dias (inclui copywriting). Projetos Expert são personalizados. Trabalhamos com prazos realistas para garantir qualidade máxima.
-                </p>
-            </details>
-
-            <details class="p-4 border-b border-white/10 group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    Eu preciso pagar hospedagem mensal?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    Não. Utilizamos tecnologias modernas que possuem planos gratuitos vitalícios para sites estáticos. Seu site fica no ar 24/7 sem nenhum custo mensal. É literalmente pagar uma vez e esquecer - zero mensalidades, para sempre.
-                </p>
-            </details>
-
-            <details class="p-4 border-b border-white/10 group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    E se eu não gostar do resultado?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    Todos os planos incluem rodadas de revisão. No Start: 1 revisão. No Aura Pro: 2 revisões completas. No Expert: revisões ilimitadas até sua aprovação. Além disso, você valida o design antes de partirmos para o código final. Trabalhamos com você, não para você - entregar algo que você não ame seria falhar com nosso próprio padrão.
-                </p>
-            </details>
-
-            <details class="p-4 border-b border-white/10 group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    Isso é WordPress ou Wix?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    Não. Sites WordPress e Wix são lentos, cheios de plugins desnecessários e exigem manutenção constante. Nós escrevemos código puro (HTML, CSS, JavaScript) do zero. O resultado? Sites até 10x mais rápidos, nota 100 no Google PageSpeed, e zero preocupação com atualizações ou vulnerabilidades de segurança.
-                </p>
-            </details>
-
-            <details class="p-4 border-b border-white/10 group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    Por que pagar R$ 1.500 se tem Wix por R$ 50/mês?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    Ótima pergunta! Vamos fazer as contas: Wix custa R$ 50/mês = R$ 1.800 em 3 anos. E você não é dono de nada - parou de pagar, seu site sai do ar. Com a Aura, você paga R$ 1.497 uma única vez e o site é 100% seu para sempre. Sem renovações, sem surpresas. Ah, e nossos sites são profissionalmente mais rápidos e otimizados para vendas.
-                </p>
-            </details>
-
-            <details class="p-4 border-b border-white/10 group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    Vocês escrevem os textos?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    Sim! No plano Aura Pro, o copywriting profissional está incluso. Nossa redatora cria textos persuasivos focados em conversão - não apenas "textos bonitos", mas palavras que vendem. Se você já tem os textos prontos, ótimo! Caso contrário, nós cuidamos disso para você no Pro e Expert.
-                </p>
-            </details>
-
-            <details class="p-4 border-b border-white/10 group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    O que acontece se eu quiser mudar algo depois?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    Como você recebe o código-fonte completo, tem liberdade total. Pode contratar qualquer desenvolvedor ou fazer as alterações você mesmo. Se preferir que a gente faça, oferecemos pacotes de atualização avulsos (sem mensalidade obrigatória). A ideia é: você não fica refém de ninguém.
-                </p>
-            </details>
-
-            <details class="p-4 border-none group">
-                <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
-                    Vocês dão suporte depois da entrega?
-                    <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
-                </summary>
-                <p class="mt-4 text-slate text-sm font-light leading-relaxed">
-                    Sim! Nos primeiros 30 dias após a entrega, qualquer ajuste técnico (bugs, problemas de visualização) é gratuito. Isso garante que está tudo funcionando perfeitamente. Depois desse período, você já tem o código e total autonomia. Se precisar de atualizações de conteúdo ou novas funcionalidades, trabalhamos com pacotes avulsos - nada de mensalidade forçada.
-                </p>
-            </details>
+    <section id="planos" class="relative py-24 px-6 md:px-16 lg:px-32 z-20">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">Escolha sua Aura</h2>
+            <p class="text-slate-400 text-lg">Pague uma vez. Seu para sempre. Sem mensalidades.</p>
         </div>
 
-        <!-- CTA Box Final -->
-        <div class="mt-12 glass-card p-8 rounded-lg border border-gold/30 text-center">
-            <h3 class="text-2xl font-serif text-gold mb-4">Pronto para ter seu site sem aluguel?</h3>
-            <p class="text-slate text-sm mb-6 font-light">
-                Agende uma conversa rápida de 15 minutos. Sem compromisso, sem pressão.
-            </p>
-            <a href="https://wa.me/5532999116300" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-gold text-aura-900 font-bold font-sans tracking-widest text-sm uppercase hover:bg-white hover:scale-105 transition-all shadow-lg shadow-gold/20">
-                <i class="fa-brands fa-whatsapp mr-2"></i> Falar no WhatsApp
-            </a>
-        </div>
-    </div>
-</section>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
 
-       <footer class="bg-aura-900 border-t border-white/10 pt-16 pb-8 px-6 md:px-16 relative z-50">
+            <!-- Plano Start -->
+            <div class="glass-card p-8 rounded-lg border border-purple-500/20">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-serif text-lilac mb-2">Start</h3>
+                    <p class="text-slate text-sm">Ideal para profissionais autônomos</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="text-4xl font-bold text-white font-sans mb-2">R$ 997</div>
+                    <p class="text-xs text-slate-500">Pagamento único</p>
+                </div>
+
+                <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Site One-Page responsivo</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Design profissional personalizado</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Até 5 seções de conteúdo</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Formulário de contato</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>SEO básico otimizado</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span><strong>Código-fonte completo</strong></span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span><strong>Zero custos mensais</strong></span>
+                    </li>
+                </ul>
+
+                <a href="https://wa.me/5532999116300" target="_blank"
+                    class="block w-full py-3 text-center border border-lilac/30 text-lilac hover:bg-lilac/10 text-sm font-medium tracking-wide uppercase rounded-lg transition-all">
+                    Selecionar
+                </a>
+            </div>
+
+            <!-- Plano Aura Pro -->
+            <div
+                class="glass-card p-10 rounded-lg relative transform lg:-translate-y-6 z-20 bg-gradient-to-b from-aura-800 via-aura-900 to-aura-900 border border-gold/50">
+                <div
+                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-aura-900 text-xs font-bold px-6 py-1.5 uppercase rounded-full">
+                    Recomendado
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-3xl font-serif text-gold mb-2">Aura Pro</h3>
+                    <p class="text-slate-300 text-sm">Para quem busca alta conversão</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="text-5xl font-bold text-white font-sans mb-2">R$ 1.497</div>
+                    <p class="text-xs text-gold-light">Pagamento único</p>
+                </div>
+
+                <ul class="space-y-3 mb-8 text-sm text-white">
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span><strong>Tudo do plano Start +</strong></span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span>Landing Page de alta conversão</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span><strong>Copywriting profissional incluso</strong></span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span>Design premium com animações</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span>Até 8 seções personalizadas</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span>Integração com Google Analytics</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span>2 rodadas de revisão</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span><strong>Código + documentação técnica</strong></span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-gold text-lg">✓</span>
+                        <span><strong>Propriedade total e vitalícia</strong></span>
+                    </li>
+                </ul>
+
+                <a href="https://wa.me/5532999116300" target="_blank"
+                    class="block w-full py-4 text-center bg-gold text-aura-900 font-bold hover:bg-white transition text-sm tracking-wide uppercase rounded-lg shadow-lg">
+                    Garantir Vaga
+                </a>
+            </div>
+
+            <!-- Plano Expert -->
+            <div class="glass-card p-8 rounded-lg border border-purple-500/20">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-serif text-lilac mb-2">Expert</h3>
+                    <p class="text-slate text-sm">Projetos complexos e lançamentos</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="text-4xl font-bold text-white font-sans mb-2">R$ 2.500+</div>
+                    <p class="text-xs text-slate-500">Sob consulta</p>
+                </div>
+
+                <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span><strong>Tudo do Aura Pro +</strong></span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Site multi-página ou e-commerce</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Estratégia de conversão personalizada</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Design exclusivo e interativo</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Copywriting estratégico completo</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Integrações avançadas (CRM, automações)</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Consultoria de lançamento</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span>Revisões ilimitadas</span>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <span class="text-lilac text-lg">✓</span>
+                        <span><strong>Investimento único, retorno infinito</strong></span>
+                    </li>
+                </ul>
+
+                <a href="https://wa.me/5532999116300" target="_blank"
+                    class="block w-full py-3 text-center border border-lilac/30 text-lilac hover:bg-lilac/10 text-sm font-medium tracking-wide uppercase rounded-lg transition-all">
+                    Consultar
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    </section>
+
+    <section id="faq" class="py-24 px-6 md:px-16 relative z-30 bg-aura-900 border-t border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-serif text-white text-center mb-12">Perguntas Frequentes</h2>
+
+            <div class="glass-card p-2 rounded-lg">
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Quanto tempo demora para ficar pronto?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        O prazo médio é de 7 a 14 dias úteis, dependendo do plano escolhido e da complexidade. No plano
+                        Start, geralmente entregamos em 7 dias. No Aura Pro, entre 10-14 dias (inclui copywriting).
+                        Projetos Expert são personalizados. Trabalhamos com prazos realistas para garantir qualidade
+                        máxima.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Eu preciso pagar hospedagem mensal?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Não. Utilizamos tecnologias modernas que possuem planos gratuitos vitalícios para sites
+                        estáticos. Seu site fica no ar 24/7 sem nenhum custo mensal. É literalmente pagar uma vez e
+                        esquecer - zero mensalidades, para sempre.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        E se eu não gostar do resultado?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Todos os planos incluem rodadas de revisão. No Start: 1 revisão. No Aura Pro: 2 revisões
+                        completas. No Expert: revisões ilimitadas até sua aprovação. Além disso, você valida o design
+                        antes de partirmos para o código final. Trabalhamos com você, não para você - entregar algo que
+                        você não ame seria falhar com nosso próprio padrão.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Isso é WordPress ou Wix?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Não. Sites WordPress e Wix são lentos, cheios de plugins desnecessários e exigem manutenção
+                        constante. Nós escrevemos código puro (HTML, CSS, JavaScript) do zero. O resultado? Sites até
+                        10x mais rápidos, nota 100 no Google PageSpeed, e zero preocupação com atualizações ou
+                        vulnerabilidades de segurança.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Por que pagar R$ 1.500 se tem Wix por R$ 50/mês?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Ótima pergunta! Vamos fazer as contas: Wix custa R$ 50/mês = R$ 1.800 em 3 anos. E você não é
+                        dono de nada - parou de pagar, seu site sai do ar. Com a Aura, você paga R$ 1.497 uma única vez
+                        e o site é 100% seu para sempre. Sem renovações, sem surpresas. Ah, e nossos sites são
+                        profissionalmente mais rápidos e otimizados para vendas.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Vocês escrevem os textos?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Sim! No plano Aura Pro, o copywriting profissional está incluso. Nossa redatora cria textos
+                        persuasivos focados em conversão - não apenas "textos bonitos", mas palavras que vendem. Se você
+                        já tem os textos prontos, ótimo! Caso contrário, nós cuidamos disso para você no Pro e Expert.
+                    </p>
+                </details>
+
+                <details class="p-4 border-b border-white/10 group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        O que acontece se eu quiser mudar algo depois?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Como você recebe o código-fonte completo, tem liberdade total. Pode contratar qualquer
+                        desenvolvedor ou fazer as alterações você mesmo. Se preferir que a gente faça, oferecemos
+                        pacotes de atualização avulsos (sem mensalidade obrigatória). A ideia é: você não fica refém de
+                        ninguém.
+                    </p>
+                </details>
+
+                <details class="p-4 border-none group">
+                    <summary class="font-sans font-medium text-white flex justify-between items-center text-lg">
+                        Vocês dão suporte depois da entrega?
+                        <i class="fa-solid fa-chevron-down text-lilac group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate text-sm font-light leading-relaxed">
+                        Sim! Nos primeiros 30 dias após a entrega, qualquer ajuste técnico (bugs, problemas de
+                        visualização) é gratuito. Isso garante que está tudo funcionando perfeitamente. Depois desse
+                        período, você já tem o código e total autonomia. Se precisar de atualizações de conteúdo ou
+                        novas funcionalidades, trabalhamos com pacotes avulsos - nada de mensalidade forçada.
+                    </p>
+                </details>
+            </div>
+
+            <!-- CTA Box Final -->
+            <div class="mt-12 glass-card p-8 rounded-lg border border-gold/30 text-center">
+                <h3 class="text-2xl font-serif text-gold mb-4">Pronto para ter seu site sem aluguel?</h3>
+                <p class="text-slate text-sm mb-6 font-light">
+                    Agende uma conversa rápida de 15 minutos. Sem compromisso, sem pressão.
+                </p>
+                <a href="https://wa.me/5532999116300" target="_blank"
+                    class="inline-flex items-center justify-center px-8 py-4 bg-gold text-aura-900 font-bold font-sans tracking-widest text-sm uppercase hover:bg-white hover:scale-105 transition-all shadow-lg shadow-gold/20">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <section id="contato" class="py-24 px-6 md:px-16 relative z-20 bg-gradient-to-b from-aura-900 to-black">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <span class="text-gold text-xs tracking-[0.3em] uppercase mb-4 block">Vamos Conversar?</span>
+            <h2 class="text-3xl md:text-5xl font-serif text-white mb-12">Comece sua jornada digital</h2>
+
+            <div class="glass-card p-8 md:p-12 rounded-lg border border-white/10 text-left">
+                <form
+                    onsubmit="event.preventDefault(); window.open('https://wa.me/5532999116300?text=Olá, gostaria de um orçamento para o plano ' + document.getElementById('plano').value + '. Meu nome é ' + document.getElementById('nome').value, '_blank');"
+                    class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-slate text-xs uppercase tracking-wider mb-2">Seu Nome</label>
+                            <input type="text" id="nome" required
+                                class="w-full bg-aura-900/50 border border-white/10 rounded p-3 text-white focus:border-gold focus:outline-none transition-colors"
+                                placeholder="Como podemos te chamar?">
+                        </div>
+                        <div>
+                            <label class="block text-slate text-xs uppercase tracking-wider mb-2">WhatsApp</label>
+                            <input type="tel" required
+                                class="w-full bg-aura-900/50 border border-white/10 rounded p-3 text-white focus:border-gold focus:outline-none transition-colors"
+                                placeholder="(DD) 99999-9999">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-slate text-xs uppercase tracking-wider mb-2">Qual plano te
+                            interessou?</label>
+                        <select id="plano"
+                            class="w-full bg-aura-900/50 border border-white/10 rounded p-3 text-white focus:border-gold focus:outline-none transition-colors">
+                            <option value="Start">Plano Start (R$ 997)</option>
+                            <option value="Aura Pro">Plano Aura Pro (R$ 1.497)</option>
+                            <option value="Expert">Plano Expert (Sob Consulta)</option>
+                            <option value="Dúvida">Ainda estou em dúvida</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button type="submit"
+                            class="w-full py-4 bg-gold text-aura-900 font-bold font-sans tracking-widest text-sm uppercase hover:bg-white hover:scale-[1.02] transition-all shadow-lg shadow-gold/20">
+                            Solicitar Orçamento no WhatsApp
+                        </button>
+                        <p class="text-center text-slate-500 text-[10px] mt-4">
+                            Ao clicar, você será redirecionado para o WhatsApp da nossa equipe.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-aura-900 border-t border-white/10 pt-16 pb-8 px-6 md:px-16 relative z-50">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 text-left">
-            
+
             <div class="md:col-span-1">
-                <span class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lilac via-gold to-lilac tracking-widest">
+                <span
+                    class="font-serif text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lilac via-gold to-lilac tracking-widest">
                     AURA GO
                 </span>
                 <p class="text-slate text-xs mt-4 font-sans font-light leading-relaxed">
@@ -512,13 +713,14 @@
                 <h4 class="text-white font-serif text-lg mb-4">Contato</h4>
                 <ul class="space-y-2 text-xs font-sans text-slate">
                     <li class="flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-success"></i> 
-                        <a href="https://wa.me/5532999116300" target="_blank" class="hover:text-white transition-colors">
+                        <i class="fa-brands fa-whatsapp text-success"></i>
+                        <a href="https://wa.me/5532999116300" target="_blank"
+                            class="hover:text-white transition-colors">
                             (32) 99911-6300
                         </a>
                     </li>
                     <li class="flex items-center gap-2">
-                        <i class="fa-regular fa-envelope text-lilac"></i> 
+                        <i class="fa-regular fa-envelope text-lilac"></i>
                         <a href="mailto:fale.aura@aurago.site" class="hover:text-white transition-colors">
                             fale.aura@aurago.site
                         </a>
@@ -529,7 +731,8 @@
             <div>
                 <h4 class="text-white font-serif text-lg mb-4">Rede Social</h4>
                 <div class="flex gap-4">
-                    <a href="https://instagram.com/aurago.site" target="_blank" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-lilac hover:text-aura-900 transition-all">
+                    <a href="https://instagram.com/aurago.site" target="_blank"
+                        class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-lilac hover:text-aura-900 transition-all">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
@@ -543,5 +746,23 @@
         </div>
     </footer>
 
-         
-  
+    <script>
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+
+</html>
