@@ -1,125 +1,96 @@
 
-AuraGo – Landing Page de Alta Conversão
+# AuraGo – Landing Page de Alta Conversão
 
-Landing page desenvolvida com foco em performance, UX/UI e arquitetura front-end moderna. O projeto demonstra domínio em HTML5 semântico, Tailwind CSS customizado, JavaScript modular e práticas de conversão aplicadas ao design digital.
+Landing page desenvolvida com foco em performance, UX/UI e arquitetura front-end moderna. O projeto demonstra domínio em HTML5 semântico, Tailwind CSS customizado, JavaScript modular e práticas de conversão aplicadas ao design digital.  
 Todo o site é estático, otimizado para carregamento rápido e compatível com GitHub Pages.
 
-Visão Geral do Projeto
+---
+
+## Visão Geral do Projeto
 
 A proposta desta landing page é apresentar uma solução visualmente consistente, de alta performance e orientada ao comportamento do usuário. O projeto combina técnicas de design, microinterações e boas práticas de desenvolvimento para entregar uma experiência fluida tanto no desktop quanto no mobile.
 
-Principais objetivos técnicos e estratégicos:
+Principais objetivos:
+- Velocidade superior a 95 no Google PageSpeed  
+- Interface clara, escaneável e orientada à decisão  
+- Elementos de conversão aplicados ao design  
+- Arquitetura estática leve, modular e escalável  
+- Integração entre front-end, UX e design digital  
 
-Garantir velocidade superior a 95 no PageSpeed.
+---
 
-Criar uma interface clara, escaneável e orientada a decisão.
+## Destaques Técnicos
 
-Implementar elementos de conversão baseados em UX.
+- HTML5 semântico com SEO técnico aplicado  
+- Tailwind CSS com configuração personalizada  
+- JavaScript ES6+ com módulos independentes  
+- Lazy loading para otimização de imagens  
+- WebP e SVG para redução de peso total  
+- Critical CSS inline para acelerar renderização  
+- Integração de formulário com Google Sheets  
+- Arquitetura totalmente estática, ideal para GitHub Pages  
 
-Construir uma página estática leve, modular e escalável.
+---
 
-Demonstrar capacidade de unir desenvolvimento front-end com design digital.
+## Destaques de UX/UI
 
+- Hierarquia visual clara e orientada a escaneabilidade  
+- Paleta exclusiva baseada nas cores Aura 900, Gold e Lilac  
+- Tipografia combinada (Cormorant Garamond + Montserrat)  
+- Componentes responsivos com microinterações  
+- Interface mobile-first projetada para fluidez  
+- Quiz progressivo que reduz fricção na captura de dados  
+- Aplicação de heurísticas de UX (Nielsen, Gestalt, Hicks)  
+- Foco em conversão e clareza de propósito  
 
-Destaques Técnicos
+---
 
-HTML5 semântico com SEO técnico aplicado
+## Principais Funcionalidades
 
-Tailwind CSS com configuração personalizada
+### Hero Section  
+Headline de impacto, CTAs duplos e contraste forte para foco visual imediato.
 
-JavaScript ES6+ com módulos independentes
+### Comparativo de Economia  
+Estrutura clara usando gestalt e contraste para facilitar comparação.
 
-Lazy loading para otimizar imagens e seções
+### Carrossel de Portfólio  
+Componentes responsivos com navegação suave e perspectiva visual.
 
-WebP e SVG para redução de peso
+### Quiz de Captação  
+Três etapas integradas, validação instantânea e envio automático para planilha.
 
-Critical CSS inline
+### Tabela de Planos  
+Diferenciação visual clara para simplificar decisão do usuário.
 
-Integração de formulário usando Google Sheets
+### FAQ Interativo  
+Accordion otimizado com animações leves, garantindo legibilidade.
 
-Arquitetura totalmente estática, sem dependência de backend
+---
 
+## Sistema de Design
 
-Destaques de UX/UI
+### Paleta de Cores
+- Aura 900 (#0B0516)  
+- Gold (#D4AF37)  
+- Lilac (#A78BFA)
 
-Hierarquia visual clara com foco em leitura rápida
+### Tipografia
+- Cormorant Garamond para títulos  
+- Montserrat para textos e elementos funcionais  
 
-Tipografia combinando Cormorant Garamond (headlines) e Montserrat (corpo)
+### Microinterações
+- Hover effects discretos  
+- Animações usando transform e opacity  
+- Reveal animations aplicados a seções principais  
+- Glassmorphism em áreas de destaque  
 
-Paleta exclusiva (Aura 900, Gold, Lilac) com aplicação consistente
+---
 
-Interface mobile-first com layout fluido
+## Stack Tecnológica
 
-Microinterações leves usando transform e opacity
-
-Componentes responsivos com estados de foco e interação
-
-Quiz progressivo para reduzir fricção no envio de dados
-
-Utilização de heurísticas de UX para tomada de decisão
-
-
-Principais Seções e Funcionalidades
-
-Hero Section
-
-Área de impacto com headline clara, CTA duplo e contraste forte.
-
-Comparativo de Economia
-
-Layout baseado em cartões e gestalt para facilitar comparação rápida.
-
-Carrossel de Portfólio
-
-Comportamento suave, responsivo e com manutenção visual do contexto.
-
-Quiz de Captura
-
-Três etapas com transições fluidas, validação instantânea e envio direto para planilha.
-
-Tabela de Planos
-
-Componentes com diferenciação visual para facilitar escolhas rápidas.
-
-FAQ Interativo
-
-Accordion otimizado com animações leves.
-
-Sistema de Design
-
-Cores
-
-Aura 900 (#0B0516)
-
-Gold (#D4AF37)
-
-Lilac (#A78BFA)
-
-
-Tipografia
-
-Cormorant Garamond para títulos
-
-Montserrat para textos
-
-Hierarquia tipográfica organizada para escaneabilidade
-
-
-Microinterações
-
-Efeitos suaves de hover
-
-Animações usando transform e opacity
-
-Reveal animations discretos
-
-Glassmorphism em componentes específicos
-
-
-Stack Tecnológica
-
+```yaml
 Frontend:
-  HTML5
+  HTML5 semântico
   Tailwind CSS (customizado)
   JavaScript ES6+ modular
 
@@ -138,6 +109,9 @@ Performance:
   Lazy loading
   WebP e SVG otimizados
 
+
+---
+
 Estrutura do Repositório
 
 AuraGo-Landing-Page/
@@ -154,13 +128,16 @@ AuraGo-Landing-Page/
 ├── web-app-manifest-192x192.png
 └── web-app-manifest-512x512.png
 
-A estrutura segue o padrão recomendado para GitHub Pages: o arquivo index.html na raiz garante que o site seja carregado automaticamente.
+A estrutura segue o padrão recomendado para GitHub Pages: o arquivo index.html na raiz garante carregamento imediato.
+
+
+---
 
 Métricas Técnicas
 
 PageSpeed: 96 Mobile / 98 Desktop
 
-Tamanho final de CSS: aproximadamente 15 KB
+CSS final com aproximadamente 15 KB
 
 Redução de LCP: cerca de 40% com lazy loading
 
@@ -168,6 +145,9 @@ Tempo médio estimado na página: 3m42s
 
 Conversão simulada: 8.2%
 
+
+
+---
 
 Execução Local
 
@@ -180,19 +160,21 @@ Para desenvolvimento com Tailwind:
 npm install -D tailwindcss
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
+
+---
+
 Objetivo Profissional
 
-Este projeto demonstra competências relevantes para vagas de Front-end e UX/UI:
+Este projeto demonstra competências essenciais para vagas de Front-end e UX/UI:
 
-Criação de interfaces funcionais, escaláveis e modernas
+Construção de interfaces modernas, responsivas e escaláveis
 
-Domínio de HTML, CSS utilitário e JavaScript ES6+
+Conhecimento sólido em HTML, CSS utilitário e JavaScript ES6+
 
-Compreensão sólida de heurísticas de UX e design responsivo
+Domínio de heurísticas de usabilidade e microinterações
 
-Habilidade para unir performance, design e conversão
+Criação de componentes performáticos e bem estruturados
 
-Capacidade de construir soluções limpas, estáticas e de alta performance
+Capacidade de unir design digital, desempenho e conversão
 
-
-
+Organização de código e arquitetura voltadas à manutenção
