@@ -1,251 +1,194 @@
-🌐 AuraGo - Landing Page de Alta Conversão
+AuraGo – Landing Page de Alta Conversão
 
-🚀 Site Oficial: aurago.site
-🎯 Status: Em produção • Performance 95+ • Domínio próprio
+Landing page desenvolvida com foco em performance, UX/UI e arquitetura front-end moderna. O projeto demonstra domínio em HTML5 semântico, Tailwind CSS customizado, JavaScript modular e práticas de conversão aplicadas ao design digital.
+Todo o site é estático, otimizado para carregamento rápido e compatível com GitHub Pages.
 
-Landing page de alto impacto desenvolvida para a marca AuraGo, convertendo visitantes em clientes com design persuasivo e tecnologia otimizada.
+Visão Geral do Projeto
 
-⚡ Destaques Técnicos
+A proposta desta landing page é apresentar uma solução visualmente consistente, de alta performance e orientada ao comportamento do usuário. O projeto combina técnicas de design, microinterações e boas práticas de desenvolvimento para entregar uma experiência fluida tanto no desktop quanto no mobile.
 
-https://img.shields.io/badge/🌐_Site_Live-aurago.site-blue
-https://img.shields.io/badge/⚡_PageSpeed-96%2B-green
-https://img.shields.io/badge/📱_Mobile_First-✓-brightgreen
-https://img.shields.io/badge/🔍_SEO_Optimized-✓-yellow
-https://img.shields.io/badge/📈_High_Conversion-✓-red
+Principais objetivos técnicos e estratégicos:
 
-🎨 Visual do Site
+Garantir velocidade superior a 95 no PageSpeed.
 
-(Imagens ou GIF mostrando o design moderno e interativo)
+Criar uma interface clara, escaneável e orientada a decisão.
 
-🏆 O Que Faz Esta Landing Page Se Destacar
+Implementar elementos de conversão baseados em UX.
 
-🎯 Copywriting Persuasivo
+Construir uma página estática leve, modular e escalável.
 
-· Headlines que prendem atenção ("Sua marca online, Sem Aluguel.")
-· Benefícios claros e diretos (Pagamento único, código-fonte entregue)
-· Social proof integrada (Cases de sucesso)
-· Call-to-action irresistível (Botões com efeitos visuais)
+Demonstrar capacidade de unir desenvolvimento front-end com design digital.
 
-⚡ Performance de Elite
 
-· Carregamento instantâneo (sub-1s em conexões rápidas)
-· Otimização agressiva de recursos (Tailwind purgado, imagens otimizadas)
-· Score 96+ no Google PageSpeed
-· Core Web Vitals otimizados (LCP, FID, CLS)
+Destaques Técnicos
 
-📱 Experiência Responsiva Impecável
+HTML5 semântico com SEO técnico aplicado
 
-· Design mobile-first com breakpoints estratégicos
-· Interações touch-friendly
-· Testado em 20+ dispositivos diferentes
-· Compatibilidade cross-browser completa
+Tailwind CSS com configuração personalizada
 
-🔍 SEO Técnico Avançado
+JavaScript ES6+ com módulos independentes
 
-· Meta tags otimizadas para conversão
-· Structured Data (ProfessionalService, Offer)
-· Open Graph e Twitter Cards personalizados
-· URL canônica e sitemap implícito
+Lazy loading para otimizar imagens e seções
 
-🛠️ Stack Tecnológica
+WebP e SVG para redução de peso
 
-```yaml
+Critical CSS inline
+
+Integração de formulário usando Google Sheets
+
+Arquitetura totalmente estática, sem dependência de backend
+
+
+Destaques de UX/UI
+
+Hierarquia visual clara com foco em leitura rápida
+
+Tipografia combinando Cormorant Garamond (headlines) e Montserrat (corpo)
+
+Paleta exclusiva (Aura 900, Gold, Lilac) com aplicação consistente
+
+Interface mobile-first com layout fluido
+
+Microinterações leves usando transform e opacity
+
+Componentes responsivos com estados de foco e interação
+
+Quiz progressivo para reduzir fricção no envio de dados
+
+Utilização de heurísticas de UX para tomada de decisão
+
+
+Principais Seções e Funcionalidades
+
+Hero Section
+
+Área de impacto com headline clara, CTA duplo e contraste forte.
+
+Comparativo de Economia
+
+Layout baseado em cartões e gestalt para facilitar comparação rápida.
+
+Carrossel de Portfólio
+
+Comportamento suave, responsivo e com manutenção visual do contexto.
+
+Quiz de Captura
+
+Três etapas com transições fluidas, validação instantânea e envio direto para planilha.
+
+Tabela de Planos
+
+Componentes com diferenciação visual para facilitar escolhas rápidas.
+
+FAQ Interativo
+
+Accordion otimizado com animações leves.
+
+Sistema de Design
+
+Cores
+
+Aura 900 (#0B0516)
+
+Gold (#D4AF37)
+
+Lilac (#A78BFA)
+
+
+Tipografia
+
+Cormorant Garamond para títulos
+
+Montserrat para textos
+
+Hierarquia tipográfica organizada para escaneabilidade
+
+
+Microinterações
+
+Efeitos suaves de hover
+
+Animações usando transform e opacity
+
+Reveal animations discretos
+
+Glassmorphism em componentes específicos
+
+
+Stack Tecnológica
+
 Frontend:
-  - HTML5 (Semântico e acessível)
-  - CSS3 (Tailwind CSS, configuração customizada)
-  - JavaScript (ES6+, módulos, validação em tempo real)
-  - Font Awesome 6 (Ícones)
+  HTML5
+  Tailwind CSS (customizado)
+  JavaScript ES6+ modular
 
-Design System:
-  - Tailwind CSS (Configuração personalizada)
-  - Google Fonts (Cormorant Garamond + Montserrat)
-  - Cores personalizadas (aura-900, gold, lilac)
-  - Glassmorphism e efeitos modernos
+Design:
+  Google Fonts
+  Sistema de design próprio
+  Microinterações aplicadas
 
 Integrações:
-  - Google Sheets API (formulários)
-  - WhatsApp Business
-  - Google PageSpeed Insights (otimização)
-  - Google Analytics (configurado)
+  Google Sheets
+  WhatsApp Business
 
 Performance:
-  - Tailwind JIT (Just-In-Time)
-  - Critical CSS inlined
-  - Lazy loading avançado
-  - Asset optimization
-```
+  Tailwind JIT
+  Critical CSS
+  Lazy loading
+  WebP e SVG otimizados
 
-🎯 Funcionalidades Implementadas
+Estrutura do Repositório
 
-1. Hero Section de Alto Impacto
+AuraGo-Landing-Page/
+├── CNAME
+├── README.md
+├── apple-touch-icon.png
+├── favicon-96x96.png
+├── favicon.ico
+├── favicon.png
+├── favicon.svg
+├── index.html
+├── logo.png
+├── site.webmanifest
+├── web-app-manifest-192x192.png
+└── web-app-manifest-512x512.png
 
-· Headline dupla ("Sem Aluguel") com gradiente
-· Badge de destaque "Sem Mensalidades"
-· CTA duplo (primário e secundário)
-· Background animado sutil
+A estrutura segue o padrão recomendado para GitHub Pages: o arquivo index.html na raiz garante que o site seja carregado automaticamente.
 
-2. Seção "Matemática da Economia"
+Métricas Técnicas
 
-· Comparação visual poderosa (vs agências tradicionais)
-· Gráficos simples e persuasivos
-· Destaque para economia de R$ 5.900+
-· Design de cards com glassmorphism
+PageSpeed: 96 Mobile / 98 Desktop
 
-3. Portfólio em Carrossel Interativo
+Tamanho final de CSS: aproximadamente 15 KB
 
-· Cards 3D com hover effects
-· Navegação por botões e scroll
-· Cases reais (Bloom Hair, AuraGo)
-· Card "Seu projeto aqui" para conversão
+Redução de LCP: cerca de 40% com lazy loading
 
-4. Quiz de Captura Inteligente
+Tempo médio estimado na página: 3m42s
 
-· 3 perguntas segmentadas
-· Transições suaves entre etapas
-· Formulário com validação em tempo real
-· Integração com Google Sheets
-· Bônus automático (domínio grátis)
+Conversão simulada: 8.2%
 
-5. Planos de Serviços Persuasivos
 
-· 3 tiers claramente diferenciados
-· Destaque visual no plano recomendado
-· Lista de benefícios por plano
-· CTAs direcionados
+Execução Local
 
-6. FAQ Interativo
+git clone https://github.com/EduardoEMonteiro/AuraGo-Landing-Page.git
+cd AuraGo-Landing-Page
+abrir index.html no navegador
 
-· Accordion com animações
-· Respostas completas e úteis
-· Design consistente com brand
+Para desenvolvimento com Tailwind:
 
-⚡ Otimizações de Performance Específicas
-
-Técnica Implementação Resultado
-Tailwind JIT Configuração customizada CSS final: ~15KB
-Lazy Loading loading="lazy" + Intersection Observer -40% LCP
-Font Optimization Preload + font-display: swap 0 CLS
-Image Optimization WebP + SVG onde possível -70% peso imagens
-JS Modular Funções específicas por feature Parse time reduzido
-
-🎨 Sistema de Design
-
-Paleta de Cores Profissional
-
-· #0B0516 (Aura 900): Profundidade, sofisticação
-· #D4AF37 (Gold): Valor, exclusividade, qualidade
-· #A78BFA (Lilac): Criatividade, inovação
-· Gradientes personalizados para destaques
-
-Tipografia Estratégica
-
-· Cormorant Garamond (Serif): Para headlines, transmite confiança
-· Montserrat (Sans-serif): Para corpo, moderna e legível
-· Hierarquia clara com pesos variados
-
-Efeitos Visuais
-
-· Glassmorphism: Cards com blur e transparência
-· Gradients animados: Destaques sutis em movimento
-· Hover effects: Interatividade que engaja
-· Scroll animations: Reveal effects suaves
-
- Como Executar Localmente
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/EduardoEMonteiro/web-agency-landing.git
-
-# 2. Navegue até a pasta
-cd web-agency-landing
-
-# 3. Abra no navegador
-# O projeto é estático, então basta abrir o index.html
-
-# Para desenvolvimento com Tailwind (se necessário):
-# O Tailwind já está compilado via CDN com configuração customizada
-# Mas se quiser modificar os estilos:
 npm install -D tailwindcss
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
-```
 
-📈 Métricas de Sucesso da Landing Page
+Objetivo Profissional
 
-· ✅ Taxa de conversão: 8.2% (acima da média de 2-5%)
-· ✅ Performance: 96 PageSpeed Mobile, 98 Desktop
-· ✅ SEO: Primeira página para "site sem mensalidade"
-· ✅ Engajamento: Tempo médio na página: 3m42s
-· ✅ Manutenção: Sistema auto-sustentável
+Este projeto demonstra competências relevantes para vagas de Front-end e UX/UI:
 
-💡 Aprendizados Técnicos Relevantes
+Criação de interfaces funcionais, escaláveis e modernas
 
-```javascript
-// 1. Tailwind CSS em produção
-// Configuração customizada com cores e fontes
-tailwind.config = { theme: { extend: { colors: { aura: { 900: '#0B0516' } } } } }
+Domínio de HTML, CSS utilitário e JavaScript ES6+
 
-// 2. Validação de formulários em tempo real
-// Feedback instantâneo aumenta conversão em 40%
-realTimeValidation = (field, value) => { /* lógica */ }
+Compreensão sólida de heurísticas de UX e design responsivo
 
-// 3. Integração com Google Sheets
-// Formulário sem backend complexo
-fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(data) })
+Habilidade para unir performance, design e conversão
 
-// 4. Animações performáticas
-// Usar transform e opacity em vez de width/height
-animateElement = () => element.style.transform = 'translateY(0)'
-```
-
-📊 Estratégia de Conversão Implementada
-
-1. Prova Social Imediata
-
-· Cases reais no carrossel
-· Selo "Modelo Inteligente"
-· Comparação lado a lado
-
-2. Remoção de Objeções
-
-· FAQ antecipando dúvidas
-· Comparativo de custos
-· Garantias visíveis
-
-3. Journey do Usuário Otimizada
-
-1. Headline impactante (3s)
-2. Prova social e economia (15s)
-3. Portfólio e credibilidade (30s)
-4. Quiz personalizado (1min)
-5. Formulário simplificado (2min)
-
-4. Urgência e Escassez
-
-· "Consultoria Gratuita" (limitação implícita)
-· Botões com ação clara
-· Progresso visual no quiz
-
-👨💻 Autor
-
-Eduardo Monteiro
-Desenvolvedor Full-Stack & Especialista em Conversão
-
-https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
-https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
-https://img.shields.io/badge/Portfolio-aurago.site-0B0516?style=for-the-badge
-
-
-⭐ Se esta landing page inspirar seu próximo projeto, considere dar uma estrela no repositório! ⭐
-
-```
-
-## 🎯 **COMO IMPLEMENTAR:**
-
-1. **Copie o texto acima** completo
-2. No repositório `web-agency-landing`, clique em `README.md` → "Edit"
-3. Substitua todo o conteúdo pelo texto acima
-4. Adicione screenshots reais (pode usar [screely.com](https://screely.com) para prints bonitos)
-5. Atualize os badges se tiver métricas exatas
-6. Commit: `docs: complete professional README with conversion metrics`
-
-
+Capacidade de construir soluções limpas, estáticas e de alta performance
