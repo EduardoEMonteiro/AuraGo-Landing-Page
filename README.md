@@ -1,3 +1,4 @@
+
 AuraGo – Landing Page de Alta Conversão
 
 Landing page desenvolvida com foco em performance, UX/UI e arquitetura front-end moderna. O projeto demonstra domínio em HTML5 semântico, Tailwind CSS customizado, JavaScript modular e práticas de conversão aplicadas ao design digital.
@@ -192,3 +193,6 @@ Compreensão sólida de heurísticas de UX e design responsivo
 Habilidade para unir performance, design e conversão
 
 Capacidade de construir soluções limpas, estáticas e de alta performance
+
+
+
